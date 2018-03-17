@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单更换背景</title>
+    <style>
+        body {
+            background: url(imgs/1.JPG) no-repeat;
+            background-size:  100%;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var num = document.getElementById("xl");
+            num.onchange = function () {
+                switch(this.value){
+                    case "1":
+                        document.body.style.backgroundImage = "url(imgs/1.jpg)";
+                        break;
+                    case "2":
+                        document.body.style.backgroundImage = "url(imgs/2.jpg)";
+                        break;
+                    case "3":
+                        document.body.style.backgroundImage = "url(imgs/3.jpg)";
+                        break;
+                    case "4":
+                        document.body.style.backgroundImage = "url(imgs/4.jpg)"
+                        break;
+
+
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<select name="" id="xl" class="xiala">
+    <option value="1">pic1</option>
+    <option value="2">pic2</option>
+    <option value="3">pic3</option>
+    <option value="4">pic4</option>
+</select>
+</body>
+</html>
