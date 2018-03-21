@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项框切换JS</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .big {
+        width: 260px;
+        padding: 10px;
+        margin: 100px auto 0px;
+/*        background-color: pink;*/
+    }
+    .big ul {
+        height: 30px;
+        line-height: 29px;
+        list-style: none;
+        border-bottom: 1px solid #000;
+    }
+    .big ul li {
+        float: left;
+        width: 50px;
+        margin: 0 5px;
+        border: 1px solid #ccc;
+        border-bottom: none;
+        background-color: #fff;
+        text-align: center;
+        cursor: pointer;
+    }
+    .big div {
+        height: 50px;
+        border: 1px solid #000;
+        border-top: none;
+        padding: 5px 0;
+    }
+    .hide {
+        display: none;
+    }
+    .big ul li.s {
+        border-top : 2px solid green;
+        border-bottom: 1px solid #fff;
+        color: red;
+    }
+</style>
+<script>
+    window.onload = function(){
+        var oDiv = document.getElementById("bb");
+        var oUl = oDiv.getElementsByTagName("ul")[0];
+        var oLi = oUl.getElementsByTagName("li");
+        var oDivs = oDiv.getElementsByTagName("div");
+
+        for(var i= 0,len= oLi.length;i<len;i++){
+            oLi[i].index = i;
+            oLi[i].onclick = function(){
+                for(var j=0;j<len;j++){
+                    oDivs[j].className = "hide";
+                    oLi[j].className = "";
+                }
+                this.className = "s";
+                oDivs[this.index].className = "";
+            }
+        }
+    }
+</script>
+<body>
+    <div class="big" id="bb">
+        <ul>
+            <li class="s">选项1</li>
+            <li>选项2</li>
+            <li>选项3</li>
+        </ul>
+        <div>content1</div>
+        <div class="hide">content2</div>
+        <div class="hide">content3</div>
+    </div>
+</body>
+</html>
