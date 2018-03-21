@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多选项框切换JS</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .big {
+            width: 260px;
+            margin: 100px auto;
+            padding: 10px;
+        }
+        .big ul {
+            height: 20px;
+            line-height: 19px;
+            list-style: none;
+            border-bottom: 1px solid #000;
+        }
+        .big ul li {
+            float: left;
+            width: 40px;
+            margin: 0 10px;
+            border: 1px solid #000;
+            border-bottom: none;
+            font-size: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .big ul li.select {
+            height: 18px;
+            border-top: 2px solid #008000;
+            border-bottom: 1px solid #fff;
+        }
+        .big div {
+            height: 40px;
+            padding: 10px;
+            border: 1px solid #000;
+            border-top: none;
+            display: none;
+        }
+        .big .show {
+            display: block;
+        }
+    </style>
+
+    <script>
+        window.onload = function(){
+            function tab(obj){
+                var oDivs = document.getElementById(obj);
+                var oLis = oDivs.getElementsByTagName("li");
+                var oDiv = oDivs.getElementsByTagName("div");
+
+                for(var i = 0,len = oLis.length;i<len;i++){
+                    oLis[i].index = i;
+                    oLis[i].onmouseover = function () {
+                        for(var j = 0;j<len;j++){
+                            oDiv[j].className = "";
+                            oLis[j].className = "";
+                        }
+                        this.className = "select";
+                        oDiv[this.index].className = "show";
+                    }
+                }
+            }
+            tab("one");
+            tab("two");
+            tab("three");
+        }
+    </script>
+</head>
+<body>
+    <div class="big" id="one">
+        <ul>
+            <li class="select">影视</li>
+            <li>阅读</li>
+            <li>音乐</li>
+        </ul>
+        <div class="show">影视模块</div>
+        <div>阅读模块</div>
+        <div>音乐模块</div>
+    </div>
+    <div class="big" id="two">
+        <ul class="u">
+            <li class="select">影视</li>
+            <li>阅读</li>
+            <li>音乐</li>
+        </ul>
+        <div class="show">影视模块</div>
+        <div>阅读模块</div>
+        <div>音乐模块</div>
+    </div>
+    <div class="big" id="three">
+        <ul class="u">
+            <li class="select">影视</li>
+            <li>阅读</li>
+            <li>音乐</li>
+        </ul>
+        <div class="show">影视模块</div>
+        <div>阅读模块</div>
+        <div>音乐模块</div>
+    </div>
+</body>
+</html>
