@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉框JS</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .big {
+        width: 330px;
+        height: 30px;
+        margin: 100px auto;
+        padding: 10px 0 10px 10px;
+        background-color: skyblue;
+    }
+    ul {
+        list-style: none;
+    }
+    .big li {
+        float: left;
+        width: 100px;
+        height: 30px;
+        margin-right: 10px;
+        position: relative;
+    }
+    .big a {
+        line-height: 30px;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        background-color:  yellow;
+    }
+    .big li ul {
+        position: absolute;
+        display: none;
+    }
+</style>
+<script>
+    window.onload = function(){
+        var oLis = document.getElementsByClassName("small");
+        var oUls = document.getElementsByClassName("s");
+
+        for(var i = 0,len = oLis.length;i<len;i++){
+            oLis[i].index = i;
+            oLis[i].onmouseover = function(){
+                for(var j = 0;j<len;j++){
+                    oUls[j].style.display = "none";
+                }
+                oUls[this.index].style.display = "block";
+            }
+        }
+
+
+    }
+</script>
+<body>
+    <div class="big">
+        <ul>
+            <li class="small"><a href="#">影视</a>
+                <ul class="s">
+                    <li><a href="#">影视内容</a></li>
+                    <li><a href="#">影视内容</a></li>
+                    <li><a href="#">影视内容</a></li>
+                    <li><a href="#">影视内容</a></li>
+                </ul>
+            </li>
+            <li class="small"><a href="#">阅读</a>
+                <ul class="s">
+                    <li><a href="#">阅读内容</a></li>
+                    <li><a href="#">阅读内容</a></li>
+                    <li><a href="#">阅读内容</a></li>
+                    <li><a href="#">阅读内容</a></li>
+                </ul>
+            </li>
+            <li class="small"><a href="#">音乐</a>
+                <ul class="s">
+                    <li><a href="#">音乐内容</a></li>
+                    <li><a href="#">音乐内容</a></li>
+                    <li><a href="#">音乐内容</a></li>
+                    <li><a href="#">音乐内容</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
