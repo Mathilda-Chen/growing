@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>关闭二维码</title>
+    <style>
+        .box {
+            width: 282px;
+            height: 282px;
+            border: 1px solid #008000;
+            margin: 100px auto;
+            position: relative;
+        }
+        .box span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #ccc;
+            opacity: 0.8;
+            text-align: center;
+            line-height: 20px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var oX = document.getElementById("x");
+            oX.onclick = function(){
+                this.parentNode.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="box">
+        <img src="imgs/erweima.png" alt="" />
+        <span id="x">x</span>
+    </div>
+</body>
+</html>
