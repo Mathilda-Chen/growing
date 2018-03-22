@@ -10,4 +10,4 @@
 * [下拉框](https://mathilda-chen.github.io/growing/xialakuang.html)
 * [选项卡切换](https://mathilda-chen.github.io/growing/xuanxiangkaqiehuan.html)
 * [多选项卡切换](https://mathilda-chen.github.io/growing/duoxuanxiangkaqiehuan.html)
-* [关闭二维码](https://mathilda-chen.github.io/growing/guanbierweima.html "父节点")
+* [关闭二维码](https://mathilda-chen.github.io/growing/guanbiterweima.html "父节点")
