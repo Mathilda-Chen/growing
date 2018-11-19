@@ -11,3 +11,4 @@
 * [选项卡切换](https://mathilda-chen.github.io/growing/xuanxiangkaqiehuan.html)
 * [多选项卡切换](https://mathilda-chen.github.io/growing/duoxuanxiangkaqiehuan.html)
 * [关闭二维码](https://mathilda-chen.github.io/growing/guanbiterweima.html "父节点")
+* [ 会动的人](https://mathilda-chen.github.io/growing/game.html)
